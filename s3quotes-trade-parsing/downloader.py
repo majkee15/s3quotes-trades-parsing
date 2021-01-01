@@ -143,9 +143,9 @@ class Downloader(BaseMixin):
             self.logger.info(f'<============ Symbol {s} completely downloaded. ============>')
 
         self.logger.info(f"Download completed except for {self.skipped}.")
-        with open('skipped_symbols.txt', 'w') as filehandle:
-            filehandle.writelines("%s\n" % place for place in self.skipped)
-        self.skipped = []
+        if self.skipped:
+            with open('skipped_files.txt', 'w') as filehandle:
+                filehandle.writelines("%s\n" % place for place in self.skipped)
 
 
 

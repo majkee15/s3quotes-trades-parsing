@@ -1,4 +1,8 @@
+# __main__.py
+# downloads and constructs the file structured .parquet database
+
 from downloader import Downloader
+
 
 perpetuities = ['ETHUSD', 'LINKUSDT', 'LTCUSD', 'XBTUSD', 'XRPUSD', 'BCHUSD']
 dldr = Downloader()
