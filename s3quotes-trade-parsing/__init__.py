@@ -1,6 +1,6 @@
 import logging
 
-from loader import Loader
+from downloader import Downloader
 
 # package logger
 package_logger = logging.getLogger(__name__)
@@ -15,4 +15,4 @@ package_logger.setLevel(logging.DEBUG)
 # # adds the handler to the global variable: log
 # log.addHandler(_ch)
 
-__all__ = ['package_logger', 'Loader']
+__all__ = ['package_logger', 'Downloader']

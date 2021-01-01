@@ -1,13 +1,15 @@
-class Loader:
+# loader.py
 
-    def __init__(self, path=None):
-        pass
-        #
-        # if path is None:
-        #
-        # self.data_path = None
-        # pass
+import numpy as np
+import pandas as pd
 
-    def _create_data_structure(self):
+from base import BaseMixin
+
+class Loader(BaseMixin):
+    def __init__(self, path):
+        super().__init__(path)
+
+    def load_symbol(self, symbol, date):
         pass
+
 

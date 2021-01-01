@@ -1,9 +1,20 @@
-from parser_hft_sc import *
+from downloader import Downloader
 
-print(f"Available trade data for :{get_instruments('trans')}")
-print(f"Available quote data for :{get_instruments('quotes')}")
-get_availability('BCH', style='trans', verbose=True)
+perpetuities = ['ETHUSD', 'LINKUSDT', 'LTCUSD', 'XBTUSD', 'XRPUSD', 'BCHUSD']
+dldr = Downloader()
+print(f'Available instruments: {dldr.get_instruments()}')
+print('Downloading all the perpetuities.')
 
-btc_trade = read_boto_obj_to_df('XBTUSD', '2020-11-20', 'trans')
+#ldr.get_availability('XBTUSD', 'trans', verbose=True)
 
-print(btc_trade.head())
+dldr.download_database(perpetuities)
+
+
+
+#print(f'avail dict:{ldr.avail_dict}')
+
+#ldr.download_symbol('XBTUSD', overwrite=True)
+
+
+# df = ldr.read_boto_obj_to_df('XBTUSD', '2020-11-20', 'trans')
+# print(df.head())
