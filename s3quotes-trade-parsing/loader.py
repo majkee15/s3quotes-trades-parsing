@@ -18,6 +18,7 @@ class Loader(BaseMixin):
             self.avail_symbols = [s for s in  os.listdir(self.download_path) if not  s.startswith('.')]
 
     def load_symbol(self, symbol, start_stamp, end_stamp):
+        # Load from multiple files
         pass
 
     def load_symbol_day(self, symbol, date, style='trans'):
