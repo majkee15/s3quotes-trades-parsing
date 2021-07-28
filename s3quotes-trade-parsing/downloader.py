@@ -10,7 +10,8 @@ from botocore.exceptions import ClientError
 # This should probably be in constructor and take profile as an arg
 os.getenv('AWS_PROFILE', 'dynamodbSobCap')
 s3_resource = boto3.resource("s3")
-bucket = s3_resource.Bucket('sobesice-capital-data')
+# sobesice-capital-data
+bucket = s3_resource.Bucket('')
 
 
 class Downloader(BaseMixin):
